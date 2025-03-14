@@ -13,6 +13,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.config['UPLOAD_FOLDER'] = os.path.join(os.getcwd(), 'upload-folder')
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1000 * 1000 # 100MB
 
 aai.settings.api_key = os.getenv('API_KEY')
 config = aai.TranscriptionConfig(language_code='pl')
