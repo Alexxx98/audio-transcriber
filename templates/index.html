@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Audio Transcriber</title>
 </head>
 <body>
     <h1>Audio Transcriber</h1>
     <form action="/transcribe" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="audio/*" required>
-        <button type="submit">Transcribe</button>
+        <div class="transcriber">
+            <div>
+                <label for="file" class="custom-input"></label>
+                <input id="file" type="file" name="file" accept="audio/*" required>
+            </div>
+            <button type="submit">Transcribe</button>
+        </div>
     </form>
 </body>
 </html>
