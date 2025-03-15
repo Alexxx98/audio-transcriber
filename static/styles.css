@@ -1,5 +1,16 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 h1 {
-    text-align: center;
+    color: hsl(209, 100%, 53%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px hsl(192, 98%, 50%);
 }
 
 .transcriber {
@@ -10,14 +21,22 @@ h1 {
     flex-direction: column;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 51%, 0.705);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: hsla(194, 100%, 83%, 0.719);
+    overflow: hidden;
+}
+
 input {
     margin-bottom: 20px;
     font-size: 1rem;
-}
-
-/* input {
-    padding: 10px;
-    width: 35vw;
 }
 
 input[type="file"] {
@@ -25,9 +44,9 @@ input[type="file"] {
 }
 
 .custom-input {
-    font-size: 1.25rem;
+    color: hsl(192, 98%, 50%);
+    font-size: 1rem;
     background-color: hsl(209, 100%, 53%);
-    border-radius: 10px;
     display: inline-block;
     padding: 10px;
     margin-bottom: 15px;
@@ -35,19 +54,51 @@ input[type="file"] {
     transition: ease 0.5s;
   }
 .custom-input:hover {
+    color: hsl(209, 100%, 53%);
     background-color: hsl(192, 98%, 50%);
-} */
+}
+
+.file-path {
+    padding: 8px;
+    min-width: 35vw;
+    text-align: center;
+}
 
 button {
-    font-size: 1.25rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: hsl(192, 98%, 50%);
     padding: 10px;
     background-color: hsl(209, 100%, 53%);
     transition: ease 0.5s;
     border: none;
     border-radius: 10px;
+    box-shadow: 3px 5px 2px hsl(192, 98%, 50%);
 }
 
 button:hover {
+    color: hsl(209, 100%, 53%);
     background-color: hsl(192, 98%, 50%);
+    box-shadow: 3px 5px 2px hsl(209, 100%, 53%);
     cursor: pointer;
+}
+
+.img-container {
+    height: 100%;
+    position: relative;
+}
+
+.vinyl {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 84%;
+    transform: translateY(-9%);
+}
+
+.violin-key {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    transform: translateX(18%) translateY(-14%);
 }

@@ -8,15 +8,23 @@
     <title>Audio Transcriber</title>
 </head>
 <body>
-    <h1>Audio Transcriber</h1>
     <form action="/transcribe" method="post" enctype="multipart/form-data">
         <div class="transcriber">
-            <div>
-                <label for="file" class="custom-input"></label>
-                <input id="file" type="file" name="file" accept="audio/*" required>
+            <div class="container">
+                <h1>Audio Transcriber</h1>
+                <div>
+                    <label for="file" class="custom-input">Select File</label>
+                    <input id="file" type="file" name="file" accept="audio/*" required>
+                    <input id="file-path" class="file-path" type="input" disabled>
+                    <div class="img-container">
+                        <img class="vinyl" src="{{ url_for('static', filename='vinyl.png') }}" alt="vinyl">
+                        <img class="violin-key" src="{{ url_for('static', filename='violin-key.png') }}" alt="">
+                    </div>
+                </div>
+                <button type="submit">Transcribe</button>
             </div>
-            <button type="submit">Transcribe</button>
         </div>
     </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
