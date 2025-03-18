@@ -7,6 +7,11 @@ import assemblyai as aai
 import os
 
 
+try:
+    os.listdir(os.path.join(os.getcwd(), 'upload-folder'))
+except:
+    os.mkdir(os.path.join(os.getcwd(), 'upload-folder'))
+
 load_dotenv()
 
 app = Flask(__name__)
