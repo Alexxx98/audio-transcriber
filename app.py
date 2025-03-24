@@ -49,7 +49,9 @@ def transcribe():
     with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'w') as file:
         file.write(transcript.text)
 
-    return redirect(url_for('download', filename=filename))
+    url = '/transcriber' + url_for('download', filename=filename)
+
+    return redirect(url)
 
 
 @app.route('/download/<filename>')
